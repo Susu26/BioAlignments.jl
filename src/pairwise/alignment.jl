@@ -34,9 +34,7 @@ sequence(aln::PairwiseAlignment) = sequence(aln.a)
     
 Returns the reference sequence of the alignment.
 """
-function reference(aln::PairwiseAlignment)
-    aln.b
-end
+reference(aln::PairwiseAlignment) =  aln.b
 
 
 function Base.iterate(aln::PairwiseAlignment, ij=(2,1))
