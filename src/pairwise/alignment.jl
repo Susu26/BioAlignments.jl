@@ -29,10 +29,12 @@ Gets the query sequence of `pairwise_alignment`.
 """
 sequence(aln::PairwiseAlignment) = sequence(aln.a)
 
-""" This function returns the reference sequence of the alignment"""
-function reference(aln::PairwiseAlignment)
-    aln.b
-end
+"""
+    reference(aln::PairwiseAlignment)
+    
+Returns the reference sequence of the alignment.
+"""
+reference(aln::PairwiseAlignment) =  aln.b
 
 
 function Base.iterate(aln::PairwiseAlignment, ij=(2,1))
